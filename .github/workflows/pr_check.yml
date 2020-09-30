@@ -14,6 +14,11 @@ jobs:
       - name: Install Node dependencies
         run:
           npm install
+
+      - name: Compile code 
+        run:
+          npm start
+
       - name: Test using Unit Tests 
         run:
           npm test
