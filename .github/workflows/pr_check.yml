@@ -1,0 +1,20 @@
+name: pr_check
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps: 
+
+      - name: Install Node dependencies
+        run:
+          npm install
+      - name: Test using Unit Tests 
+        run:
+          npm test
+
